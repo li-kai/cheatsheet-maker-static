@@ -1,11 +1,12 @@
 {{ define "main" }}
-<main class="container main">
+<main class="row justify-content-center single main">
   <h1>Posts</h1>
   {{ range .Data.Pages }}
-  <article>
-      <h2>{{ .Title }}</h2>
-      {{ .Content }}
-  </article>
+  <section class="page">
+      <article class="inner" contenteditable="true" role="textbox">
+        {{ .Content }}
+      </article>
+    </section>
   {{ end }}
 </main>
 {{ end }}

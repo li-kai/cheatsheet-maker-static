@@ -1,14 +1,10 @@
 {{ define "main" }}
 <main class="row justify-content-center single main">
+  <h1>{{ .Title }}</h1>
   <section class="page">
-    <article class="inner">
-      <h1>{{ .Title }}</h1>
+    <article class="inner" contenteditable="true" role="textbox">
       {{ .Content }}
     </article>
   </section>
 </main>
-{{ end }}
-{{ define "scripts" }}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-Ra6zh6uYMmH5ydwCqqMoykyf1T/+ZcnOQfFPhDrp2kI4OIxadnhsvvA2vv9A7xYv"
-  crossorigin="anonymous"></script>
 {{ end }}

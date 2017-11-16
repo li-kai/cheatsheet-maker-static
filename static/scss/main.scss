@@ -53,6 +53,34 @@ body {
   margin: 0 auto;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* Avoid page breaks immediately */
+  page-break-after: avoid;
+}
+
+/* For links in the document */
+a {
+  /* Prevent colorization or decoration */
+  text-decoration: none;
+  color: black;
+}
+
+/* For tables in the document */
+table {
+  /* Avoid page breaks inside */
+  page-break-inside: avoid;
+}
+
+/* For all code in the document */
+pre {
+  white-space: pre-wrap;
+}
+
 @import "./page.scss";
 @import "./section.scss";
 @import "./footer.scss";

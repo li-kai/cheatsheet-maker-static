@@ -3,10 +3,41 @@ $a4-width: 21cm;
 $page-padding: 0.25cm;
 $columns: 5;
 
-// .single {
-//   white-space: pre-wrap;
-//   overflow-wrap: break-word;
-// }
+/* When the document is actually printed */
+@media print {
+  html,
+  body {
+    /* Reset the document's background color */
+    background-color: #fff;
+  }
+  .container,
+  .body-container,
+  .row {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .page {
+    /* Reset all page styles that have been for better screen appearance only */
+    /* Break cascading by using the !important rule */
+    /* These resets are absolute must-haves for the print styles and the specificity may be higher elsewhere */
+    width: initial !important;
+    min-height: initial !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: initial !important;
+    border-radius: initial !important;
+    background: initial !important;
+    box-shadow: initial !important;
+
+    /* Force page breaks after each .page element of the document */
+    page-break-after: always;
+  }
+  .no-print {
+    display: none;
+  }
+}
 
 .page {
   /* Reflect the paper width in the screen rendering (must match size from @page rule) */
@@ -33,10 +64,16 @@ $columns: 5;
   // flex-wrap: wrap;
   // width: ($a4-height - 3 * $page-padding) / $columns;
   height: $a4-width - 2 * $page-padding;
+  line-height: 1.38;
+  outline: 0;
   column-count: 5;
   column-gap: 0.1rem;
   column-fill: auto;
   column-rule: 1px solid $gray-300;
+  /* Require that at least this many lines of a paragraph must be left at the bottom of a page */
+  orphans: 4;
+  /* Require that at least this many lines of a paragraph must be left at the top of a new page */
+  widows: 2;
 
   p,
   div,
@@ -75,10 +112,19 @@ $columns: 5;
   h4,
   h5,
   h6 {
-    margin-bottom: 0.25rem;
+    margin: 0.25rem 0;
   }
 
   > p {
     margin-bottom: 0;
   }
+}
+
+/* Use CSS Paged Media to switch from continuous documents to sheet-like documents with separate pages */
+@page {
+  margin: $page-padding;
+  /* You can only change the size, margins, orphans, widows and page breaks here */
+
+  /* Paper size and page orientation */
+  size: A4 landscape;
 }

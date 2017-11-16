@@ -174,7 +174,7 @@ gulp.task('scss:fix', () => {
     .pipe(postcss([sortPlugin], { syntax: require('postcss-scss') }))
     .pipe(
       prettier({
-        parser: 'postcss',
+        parser: 'scss',
       })
     )
     .pipe(gulp.dest(SCSS_PATH));

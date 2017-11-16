@@ -1,4 +1,17 @@
 {{ define "main" }}
 <h1>{{ .Title }}</h1>
 {{ .Content }}
+<ul class="list row justify-content-between">
+  {{ range .Data.Pages }}
+  <li class="item col-12 col-sm-8 col-md-6 col-xl-4">
+  <article>
+    <header>
+      <h3 class="posts-title"><a class="posts-link" href='{{ .Permalink }}'> {{ .LinkTitle }}</a> </h3>
+      <div class="posts-meta">{{ .Date.Format "01 Jan 17" }} • {{ .ReadingTime }} min read</div>
+    </header>
+    {{ .Summary | truncate 150 }} <a href='{{ .Permalink }}'>more</a>
+  </article>
+  </li>
+  {{ end }}
+</ul>
 {{ end }}

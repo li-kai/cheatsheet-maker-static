@@ -1,25 +1,15 @@
 ---
-title: Shugo
-description: Hugo Boilerplate
+title: Cheatsheet Maker
+description: Optimising cheatsheets
 ---
 
-## A maintainable Hugo boilerplate
+# What is this?
 
-Shugo is a hugo boilerplate with bells and whistles attached.
+This site allows you to paste your cheatsheet content, which automatically outputs an extremely condensed, printable cheatsheet.
 
-### Opinionated
+## Instructions
 
-Prettier installed means you don't have to care about code quality.<br/>
-Every line is to specification.
+Copy paste your cheatsheet in either of pages below.
 
-### SCSS with Autoprefixer
 
-Don't need to worry about browser support. Code and it's ready to go live.
-
-### Fast
-
-Hugo + Node = Fast
-
-### One Click Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/li-kai/shugo)
+## My cheatsheets

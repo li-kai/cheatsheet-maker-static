@@ -1,0 +1,84 @@
+$a4-height: 29.7cm;
+$a4-width: 21cm;
+$page-padding: 0.25cm;
+$columns: 5;
+
+// .single {
+//   white-space: pre-wrap;
+//   overflow-wrap: break-word;
+// }
+
+.page {
+  /* Reflect the paper width in the screen rendering (must match size from @page rule) */
+  width: $a4-height;
+  /* Reflect the paper height in the screen rendering (must match size from @page rule) */
+  height: $a4-width;
+  min-height: $a4-width;
+  padding: $page-padding;
+  /* Divide single pages with some space and center all pages horizontally */
+  margin: 1cm auto;
+  overflow: hidden;
+  font-size: 10px;
+  /* Define a white paper background that sticks out from the darker overall background */
+  background: #fff;
+  /* Override outline from user agent stylesheets */
+  outline: 0;
+  /* Show a drop shadow beneath each page */
+  box-shadow: 0 4px 5px rgba(75, 75, 75, 0.2);
+}
+
+.inner {
+  // display: flex;
+  // flex-direction: column;
+  // flex-wrap: wrap;
+  // width: ($a4-height - 3 * $page-padding) / $columns;
+  height: $a4-width - 2 * $page-padding;
+  column-count: 5;
+  column-gap: 0.1rem;
+  column-fill: auto;
+  column-rule: 1px solid $gray-300;
+
+  p,
+  div,
+  ul,
+  ol,
+  dl,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  pre,
+  blockquote {
+    // width: 100%;
+    padding: 0;
+    padding-left: 0.15rem;
+    margin: 0;
+    // border-right: 1px solid $gray-300;
+  }
+
+  > ol,
+  ul {
+    padding-left: 1rem;
+
+    li {
+      text-indent: -0.25rem;
+    }
+  }
+
+  > ol,
+  ul,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 0.25rem;
+  }
+
+  > p {
+    margin-bottom: 0;
+  }
+}

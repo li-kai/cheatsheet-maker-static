@@ -1,0 +1,48 @@
+.section {
+  margin-bottom: 1rem;
+
+  .section-title {
+    font-size: $h1-font-size;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  blockquote > p {
+    padding: 0.7rem 1rem;
+    font-size: 0.95rem;
+    border-left: 3px solid $gray-800;
+  }
+}
+
+.aside {
+  margin-top: 1rem;
+}
+
+.single {
+  .posted {
+    font-size: 1.25rem;
+    color: $gray-800;
+  }
+
+  .browse {
+    justify-content: space-between;
+  }
+
+  .post-previous {
+    a:before {
+      content: '← ';
+      color: $gray-800;
+    }
+  }
+
+  .post-next {
+    text-align: right;
+
+    a:after {
+      content: ' →';
+      color: $gray-800;
+    }
+  }
+}

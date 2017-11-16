@@ -1,0 +1,10 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "My New Static Site"
+copyright = ""
+disqusShortname = ""
+enableEmoji = true
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+pygmentsStyle = "emacs"
+ignoreFiles = ["\\.scss$"]

@@ -1,0 +1,59 @@
+@import "./vendor.scss";
+@import "./animation.scss";
+
+body {
+  background: #fdfdfd;
+}
+
+.body-container {
+  padding: 0 2rem;
+  background: white;
+}
+
+.main {
+  animation-duration: 295ms;
+  animation-timing-function: $standard-curve;
+  animation-name: fade-up;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0.25;
+    transform: translateY(0.3rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.clear-list {
+  padding: 0;
+  margin: 0;
+  line-height: 1.4;
+  list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.twitter-tweet {
+  margin: 0 auto;
+}
+
+@import "./section.scss";
+@import "./footer.scss";
+@import "./archive.scss";
+@import "./paginate.scss";

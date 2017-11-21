@@ -1,6 +1,6 @@
 baseURL = "/"
 languageCode = "en-us"
-title = "My New Static Site"
+title = "Cheatsheet Maker"
 copyright = ""
 disqusShortname = ""
 enableEmoji = true

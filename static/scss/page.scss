@@ -56,6 +56,11 @@ $columns: 5;
   outline: 0;
   /* Show a drop shadow beneath each page */
   box-shadow: 0 4px 5px rgba(75, 75, 75, 0.2);
+
+  /* Scale image to fit column */
+  img {
+    width: 100%;
+  }
 }
 
 .inner {
